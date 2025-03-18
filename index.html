@@ -117,10 +117,23 @@ Created on Wed Mar 19 09:51:25 2025
 <body>
   <div class="container">
     <div class="header">
+      <!--qrcode.js library -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+      <div id="qrcode"></div>
+      <script>
+        new QRCode(document.getElementById("qrcode"), {
+          text: "https://craigaa.github.io/",
+          width: 128,
+          height: 128,
+          colorDark: "#64ffda",
+          colorLight: "#121212",
+          correctLevel: QRCode.CorrectLevel.H
+        });
+      </script>
       <h1>Craig Alexander Atkinson</h1>
       <p class="tagline">Experienced Control Systems Engineer, 5+ years in industrial automation programming and a passion for Artificial Intelligence And Macine Learning.</p>
       <p>GitHub: <a href="https://github.com/CraigAA/">CraigAA- Link to Profile</a></p>
-      <p>Linked In: <a href="linkedin.com/in/craig-alexander-atkinson"> Craig Alexander Atkinson- Link to Profile</a></p>
+      <p>Linked In: <a href="https://linkedin.com/in/craig-alexander-atkinson/"> Craig Alexander Atkinson- Link to Profile</a></p>
     </div>
     
     <div class="objective">
