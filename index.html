@@ -1,14 +1,13 @@
 <!--
-Created on Wed Mar 19 09:51:25 2025
-
-@author: Craig
+Updated: 2026
+@author: Craig Alexander Atkinson
 -->
 
 <!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Craig Alexander Atkinson</title>
+  <title>Craig Alexander Atkinson | Applied AI & Robotics Engineer</title>
   <style>
     body {
       font-family: 'Roboto', 'Segoe UI', sans-serif;
@@ -35,7 +34,7 @@ Created on Wed Mar 19 09:51:25 2025
     h1 {
       font-size: 36px;
       color: #64ffda;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
     
     h2 {
@@ -59,6 +58,16 @@ Created on Wed Mar 19 09:51:25 2025
     h3 {
       font-size: 18px;
       color: #03dac6;
+      margin-bottom: 4px;
+      margin-top: 15px;
+    }
+
+    .role-date {
+      font-size: 14px;
+      color: #a0a0a0;
+      font-style: italic;
+      margin-bottom: 8px;
+      display: block;
     }
     
     a {
@@ -89,6 +98,12 @@ Created on Wed Mar 19 09:51:25 2025
       position: absolute;
       left: -20px;
     }
+
+    /* Sub-list styling for cleaner bullet hierarchy */
+    ul ul li::before {
+      content: '-';
+      color: #03dac6;
+    }
     
     .header {
       margin-bottom: 40px;
@@ -104,6 +119,11 @@ Created on Wed Mar 19 09:51:25 2025
       color: #bb86fc;
       font-weight: 500;
     }
+
+    .cyan-highlight {
+      color: #03dac6;
+      font-weight: 500;
+    }
     
     .objective {
       border-left: 2px solid #64ffda;
@@ -117,10 +137,9 @@ Created on Wed Mar 19 09:51:25 2025
 <body>
   <div class="container">
     <div class="header">
-      <!--qrcode.js library -->
+      <!-- qrcode.js library -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-      <div style="display: flex; justify-content: center; align-items: center;">
-        <!-- QR code will be generated here -->
+      <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
         <div id="qrcode"></div>
       </div>
       <script>
@@ -134,57 +153,78 @@ Created on Wed Mar 19 09:51:25 2025
         });
       </script>
       <h1>Craig Alexander Atkinson</h1>
-      <p class="tagline">Experienced Control Systems Engineer, 5+ years in industrial automation programming and a passion for Artificial Intelligence And Macine Learning.</p>
-      <p>GitHub: <a href="https://github.com/CraigAA/">CraigAA- Link to Profile</a></p>
-      <p>Linked In: <a href="https://linkedin.com/in/craig-alexander-atkinson/"> Craig Alexander Atkinson- Link to Profile</a></p>
+      <p class="tagline">Applied Machine Learning & Industrial Control Systems Engineer | 6+ Years Bridging Edge Compute & Real-World Physical Automation.</p>
+      <p>GitHub: <a href="https://github.com/CraigAA/" target="_blank">github.com/CraigAA</a> | LinkedIn: <a href="https://linkedin.com/in/craig-alexander-atkinson/" target="_blank">in/craig-alexander-atkinson</a></p>
     </div>
     
     <div class="objective">
-      Seeking an opportunity as a <span class="highlight">Machine Learning Engineer</span>  to combine my passion AI/ML and my control system background. Particularly interested in applications within robotics and computer vision systems.
+      I am an Applied Machine Learning and Industrial Control Systems Engineer with over six years of experience bridging modern software pipelines, edge computing, and real-world physical automation in South Australia. A recent University of Adelaide <span class="highlight">Master of AI graduate (GPA 6.5/7)</span>, I specialise in PyTorch, computer vision, reinforcement learning, and sequence modelling. My focus is getting AI out of simulation and deploying robust, containerised Linux systems directly onto edge devices and live industrial hardware.
     </div>
     
     <h2>Technical Skills</h2>
     <ul>
-      <li><span class="highlight">Python Libraries:</span> PyTorch, Keras, scikit-learn, statsmodels</li>
-      <li><span class="highlight">Programming:</span> Python3, Python2.7, C++, SQL, HTML</li>
-      <li><span class="highlight">Tools:</span> Git, Jupyter, Docker</li>
+      <li><span class="highlight">AI, Machine Learning & Robotics:</span> Python, C++, PyTorch, CUDA, Computer Vision, Transformer Architectures, Sequence & Trajectory Modelling, Edge AI Inference, Linux (Docker), ROS concepts, Sim-to-Real principles.</li>
+      <li><span class="highlight">Industrial Robotics & Hardware:</span> Automated Guided Vehicles (AGV Integration), Edge Industrial PCs (IPCs), Real-Time Control Systems (PLCs/SCADA), Sensor & Vision Integration, CAN Bus, OPC-UA, MQTT, Industrial Ethernet/IP.</li>
+      <li><span class="highlight">Modern Development & Tooling:</span> Git, Bash, SQL Server, Local LLM Deployment (Ollama), Agentic AI Workflows (Claude Code, Cursor), High-Reliability Failsafe Architecture.</li>
     </ul>
     
     <h2>Education</h2>
     <ul>
-      <li><span class="highlight">In Progress:</span> Master of Artificial Intelligence and Machine Learning, University of Adelaide. Expected Completion 2026</li>
-      <li><span class="highlight">Completed:</span> Bachelor of Engineering - Mechanical Engineering (Honours), University of Adelaide. Completed 2019</li>
+      <li><span class="highlight">Master of Artificial Intelligence and Machine Learning</span>, The University of Adelaide. Completed 2026 | <span class="cyan-highlight">GPA: 6.5 / 7.0</span>
+        <ul>
+          <li><strong>Core Depth:</strong> Applied Machine Learning (PyTorch), Large Language Models, Advanced Python Programming, Advanced Cybersecurity.</li>
+        </ul>
+      </li>
+      <li><span class="highlight">Bachelor of Engineering (Mechanical) (Honours)</span>, The University of Adelaide. Completed 2019 | <span class="cyan-highlight">Second Class Honours</span>
+        <ul>
+          <li><strong>Core Depth:</strong> Mechatronics, Embedded Systems, Mechanical Dynamics, Engineering Mathematics.</li>
+        </ul>
+      </li>
     </ul>
-    
-    <h2>Experience</h2>
+
+    <h2>Research & Capstone Projects</h2>
     <ul>
       <li>
-        <span class="highlight">Control Systems Engineer, Vinpac International</span>
+        <span class="highlight">Automated Reverse Engineering of Automotive CAN Bus Protocols via Machine Learning</span> — <em>Master's Capstone Project (High Distinction)</em>
         <ul>
-          <li>Designed and implemented automation solutions using Python and SQL within Ignition SCADA environment</li>
-          <li>Developed and maintained PLC control systems for industrial wine production equipment (Rockwell, Siemens and CodeSyS systems) </li>
-          <li>Created intuitive HMI interfaces for operators- both on local machine panels and remote HTML5 based applications</li>
-          <li>Applied data collection and analysis (Python and SQL)- OEE Calcuations, KPI tracking, and tracking of Preventative Maintenance Tasks</li>
+          <li>Engineered a custom PyTorch pipeline utilising a Transformer architecture for bit-level sequence-to-sequence translation to automatically ingest, parse, and classify proprietary, high-frequency CAN bus physical layer telemetry.</li>
+          <li>Successfully trained models to extract and classify multi-channel physical signal structures across 4 distinct vehicle networks, demonstrating advanced proficiency in handling messy, real-world hardware data with deep learning.</li>
         </ul>
       </li>
     </ul>
     
-    <h2>Research Interests</h2>
+    <h2>Work Experience</h2>
     <ul>
-      <li><span class="highlight">Computer Vision</li>
-      <li><span class="highlight">Robotics</li>
-      <li><span class="highlight">Deep reinforcement learning and neural network optimization</li>
+      <li>
+        <h3>Vinpac International</h3>
+        <span class="role-date">Senior Control Systems Engineer | IT/OT & Edge Infrastructure Lead (Jan 2024 – Present)</span>
+        <ul>
+          <li><span class="cyan-highlight">Edge ML & Computer Vision:</span> Architected and deployed containerised Linux environments (Docker) on edge Industrial PCs (IPCs) to run localised computer vision and data processing pipelines, directly integrating real-time inference with physical factory control loops.</li>
+          <li><span class="cyan-highlight">Autonomous Hardware Integration (AGVs):</span> Led the software and network integration of Dematic Automated Guided Vehicles (AGVs) and enterprise ERP platforms into live plant SCADA via OPC-UA, ensuring 24/7 autonomous warehouse reliability and real-time fleet coordination.</li>
+          <li><span class="cyan-highlight">High-Reliability Architecture:</span> Engineered robust control architectures, managed switches (VLANs, NATs, Fibre), and fail-safe communication protocols across multi-site facilities, ensuring deterministic execution and physical machine safety.</li>
+          <li><span class="cyan-highlight">Workflow Optimisation:</span> Leveraged advanced terminal-based AI tools and local LLMs (Ollama) to accelerate script generation, automate network telemetry analysis, and streamline deployment cycles for the engineering team.</li>
+        </ul>
+
+        <span class="role-date" style="margin-top: 15px;">Control Systems Engineer (Jan 2022 – Dec 2023)</span>
+        <ul>
+          <li><span class="cyan-highlight">High-Throughput Automation:</span> Designed and commissioned an automated Pallet Tracking and Labelling System across 7 physical production lines handling 10M+ cases annually, bridging real-time hardware sensor data with SQL database architecture.</li>
+          <li><span class="cyan-highlight">Modular Code Deployment:</span> Engineered standardised, modular control logic deployed across 10 industrial controllers at two separate sites, drastically reducing commissioning latency and downtime.</li>
+          <li><span class="cyan-highlight">Technical Escalation Lead:</span> Acted as the primary on-floor technical escalation point for complex hardware-software debugging, diagnosing network faults, programming issues, and integration failures on active production lines.</li>
+        </ul>
+
+        <span class="role-date" style="margin-top: 15px;">Graduate Control Systems Engineer (Feb 2020 – Dec 2021)</span>
+        <ul>
+          <li><span class="cyan-highlight">Rapid Hardware Commissioning:</span> Commissioned and optimised real-time control hardware (Siemens S7-1200/1500, Allen-Bradley) across live industrial processing lines.</li>
+          <li><span class="cyan-highlight">Time-Critical Deployments:</span> Successfully executed mission-critical HMI and control architecture upgrades within strict 2-hour maintenance windows to eliminate production downtime.</li>
+        </ul>
+      </li>
     </ul>
-<!--    
-    <h2>Projects</h2>
+    
+    <h2>Core Interests & Specialties</h2>
     <ul>
-      <li>
-        <span class="highlight">Computer Vision for Quality Control</span> - Implemented PyTorch-based CNN model to detect defects in manufacturing processes
-      </li>
-      <li>
-        <span class="highlight">Industrial Sensor Data Analysis</span> - Used scikit-learn to build predictive maintenance models from time-series data
-      </li>
--->
+      <li><span class="highlight">Sim-to-Real Robotics</span> — Bridging simulation environments with messy physical hardware constraints.</li>
+      <li><span class="highlight">Imitation Learning & Trajectory Modelling</span> — Action Chunking with Transformers (ACT) and sequence prediction.</li>
+      <li><span class="highlight">Edge Compute Optimization</span> — Running low-latency PyTorch/CUDA inference on containerised edge hardware.</li>
     </ul>
   </div>
 </body>
