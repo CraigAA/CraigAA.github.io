@@ -8,223 +8,262 @@ Updated: 2026
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Craig Alexander Atkinson | Applied AI & Robotics Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --neon-cyan: #00f3ff;
+      --neon-pink: #ff00ff;
+      --neon-yellow: #fff01f;
+      --dark-bg: #0a0a0f;
+      --panel-bg: #111118;
+      --text-main: #e0e0e0;
+      --text-dim: #888899;
+    }
+
     body {
-      font-family: 'Roboto', 'Segoe UI', sans-serif;
-      font-size: 16px;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      font-size: 15px;
       line-height: 1.6;
-      color: #e0e0e0;
-      background-color: #121212;
+      color: var(--text-main);
+      background-color: var(--dark-bg);
+      background-image: 
+        linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+      background-size: 20px 20px;
       margin: 0;
       padding: 0;
     }
-    
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      background-size: 100% 2px, 3px 100%;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px;
-      border-left: 1px solid #333;
-      border-right: 1px solid #333;
     }
-    
-    h1, h2, h3 {
-      font-weight: 600;
-    }
-    
+
     h1 {
-      font-size: 36px;
-      color: #64ffda;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 32px;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan);
       margin-bottom: 5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
-    
+
     h2 {
-      font-size: 22px;
-      color: #bb86fc;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 20px;
+      color: var(--neon-pink);
+      text-shadow: 0 0 5px var(--neon-pink);
       position: relative;
       margin-top: 40px;
       padding-bottom: 8px;
+      border-bottom: 1px solid var(--neon-pink);
+      letter-spacing: 1px;
     }
-    
-    h2::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, #bb86fc, transparent);
-    }
-    
+
     h3 {
-      font-size: 18px;
-      color: #03dac6;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 16px;
+      color: var(--neon-yellow);
       margin-bottom: 4px;
       margin-top: 15px;
+      text-shadow: 0 0 3px var(--neon-yellow);
     }
 
     .role-date {
-      font-size: 14px;
-      color: #a0a0a0;
-      font-style: italic;
+      font-size: 13px;
+      color: var(--text-dim);
+      font-style: normal;
       margin-bottom: 8px;
       display: block;
+      font-family: 'Fira Code', monospace;
     }
-    
+
     a {
-      color: #64ffda;
+      color: var(--neon-cyan);
       text-decoration: none;
-      border-bottom: 1px dotted #64ffda;
+      border-bottom: 1px dotted var(--neon-cyan);
       transition: all 0.3s;
     }
-    
+
     a:hover {
-      color: #64ffda;
-      border-bottom: 1px solid #64ffda;
+      color: var(--neon-pink);
+      border-bottom: 1px solid var(--neon-pink);
+      text-shadow: 0 0 5px var(--neon-pink);
     }
-    
+
     ul {
       padding-left: 20px;
       list-style-type: none;
     }
-    
+
     li {
       margin-bottom: 12px;
       position: relative;
     }
-    
+
     li::before {
-      content: '>';
-      color: #bb86fc;
+      content: '>>';
+      color: var(--neon-cyan);
       position: absolute;
       left: -20px;
+      font-weight: bold;
     }
 
-    /* Sub-list styling for cleaner bullet hierarchy */
-    ul ul li::before {
-      content: '-';
-      color: #03dac6;
-    }
-    
     .header {
       margin-bottom: 40px;
-    }
-    
-    .tagline {
-      font-size: 16px;
-      color: #a0a0a0;
-      margin-bottom: 15px;
-    }
-    
-    .highlight {
-      color: #bb86fc;
-      font-weight: 500;
+      padding: 20px;
+      border: 1px solid var(--neon-cyan);
+      background: rgba(0, 243, 255, 0.02);
+      box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
     }
 
-    .cyan-highlight {
-      color: #03dac6;
-      font-weight: 500;
+    .tagline {
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-bottom: 15px;
+      font-family: 'Fira Code', monospace;
     }
-    
+
     .objective {
-      border-left: 2px solid #64ffda;
+      border-left: 2px solid var(--neon-pink);
       padding-left: 16px;
       margin: 25px 0;
-      font-style: italic;
-      color: #b0b0b0;
+      font-style: normal;
+      color: var(--text-main);
+      background: rgba(255, 0, 255, 0.03);
+      padding: 15px;
+      border: 1px solid rgba(255, 0, 255, 0.2);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .skill-category {
+      background: var(--panel-bg);
+      border: 1px solid var(--neon-cyan);
+      padding: 12px;
+      box-shadow: 0 0 5px rgba(0, 243, 255, 0.1);
+    }
+
+    .skill-category h3 {
+      margin-top: 0;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+      padding-bottom: 5px;
+    }
+
+    .skill-category p {
+      margin: 8px 0 0 0;
+      font-size: 13px;
+      color: var(--text-main);
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <!-- qrcode.js library -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-      <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
-        <div id="qrcode"></div>
-      </div>
-      <script>
-        new QRCode(document.getElementById("qrcode"), {
-          text: "https://craigaa.github.io/",
-          width: 128,
-          height: 128,
-          colorDark: "#64ffda",
-          colorLight: "#121212",
-          correctLevel: QRCode.CorrectLevel.H
-        });
-      </script>
       <h1>Craig Alexander Atkinson</h1>
-      <p class="tagline">Applied Machine Learning & Industrial Control Systems Engineer | 6+ Years Bridging Edge Compute & Real-World Physical Automation.</p>
-      <p>GitHub: <a href="https://github.com/CraigAA/" target="_blank">github.com/CraigAA</a> | LinkedIn: <a href="https://linkedin.com/in/craig-alexander-atkinson/" target="_blank">in/craig-alexander-atkinson</a></p>
+      <p class="tagline">[ ROBOTS & CONTROL SYSTEMS ENGINEER ] | MASTER OF AI & ML (GPA 6.56/7) | 6+ YEARS INDUSTRIAL AUTOMATION & EDGE AI</p>
+      <p>LOCATION: Adelaide, South Australia | GITHUB: <a href="https://github.com/CraigAA" target="_blank">github.com/CraigAA</a> | LINKEDIN: <a href="https://linkedin.com/in/craig-alexander-atkinson" target="_blank">linkedin.com/in/craig-alexander-atkinson</a></p>
     </div>
     
     <div class="objective">
-      I am an Applied Machine Learning and Industrial Control Systems Engineer with over six years of experience bridging modern software pipelines, edge computing, and real-world physical automation in South Australia. A recent University of Adelaide <span class="highlight">Master of AI graduate (GPA 6.5/7)</span>, I specialise in PyTorch, computer vision, reinforcement learning, and sequence modelling. My focus is getting AI out of simulation and deploying robust, containerised Linux systems directly onto edge devices and live industrial hardware.
+      <strong>// SYSTEM SUMMARY:</strong><br>
+      Robotics and control systems engineer with a Master of Artificial Intelligence and Machine Learning (GPA 6.56/7), a Bachelor of Engineering (Mechanical) (Honours), and 6 years' experience designing, deploying and leading industrial automation and edge AI systems in food and beverage manufacturing. Focused on applying machine learning and computer vision to real work by deploying and fine-tuning VLMs on local edge hardware, including NVIDIA Jetson. Strong in Python (PyTorch) programming and industrial hardware integration, including sensors, actuators and industrial networks. Experienced in keeping systems reliable outside the lab, including forklift AGV integration and 24/7 production line operation.
     </div>
     
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><span class="highlight">AI, Machine Learning & Robotics:</span> Python, C++, PyTorch, CUDA, Computer Vision, Transformer Architectures, Sequence & Trajectory Modelling, Edge AI Inference, Linux (Docker), ROS concepts, Sim-to-Real principles.</li>
-      <li><span class="highlight">Industrial Robotics & Hardware:</span> Automated Guided Vehicles (AGV Integration), Edge Industrial PCs (IPCs), Real-Time Control Systems (PLCs/SCADA), Sensor & Vision Integration, CAN Bus, OPC-UA, MQTT, Industrial Ethernet/IP.</li>
-      <li><span class="highlight">Modern Development & Tooling:</span> Git, Bash, SQL Server, Local LLM Deployment (Ollama), Agentic AI Workflows (Claude Code, Cursor), High-Reliability Failsafe Architecture.</li>
-    </ul>
-    
-    <h2>Education</h2>
-    <ul>
-      <li><span class="highlight">Master of Artificial Intelligence and Machine Learning</span>, The University of Adelaide. Completed 2026 | <span class="cyan-highlight">GPA: 6.5 / 7.0</span>
-        <ul>
-          <li><strong>Core Depth:</strong> Applied Machine Learning (PyTorch), Large Language Models, Advanced Python Programming, Advanced Cybersecurity.</li>
-        </ul>
-      </li>
-      <li><span class="highlight">Bachelor of Engineering (Mechanical) (Honours)</span>, The University of Adelaide. Completed 2019 | <span class="cyan-highlight">Second Class Honours</span>
-        <ul>
-          <li><strong>Core Depth:</strong> Mechatronics, Embedded Systems, Mechanical Dynamics, Engineering Mathematics.</li>
-        </ul>
-      </li>
-    </ul>
+    <h2>// TECHNICAL_MODULES</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>[ROBOTICS & EDGE COMPUTE]</h3>
+        <p>NVIDIA Jetson AGX Orin, CUDA, sensor and actuator integration, Docker</p>
+      </div>
+      <div class="skill-category">
+        <h3>[MACHINE LEARNING]</h3>
+        <p>PyTorch, computer vision (YOLO), Transformers, vision-language models</p>
+      </div>
+      <div class="skill-category">
+        <h3>[INDUSTRIAL SYSTEMS]</h3>
+        <p>PLCs (Siemens, Allen-Bradley), Ignition SCADA, OPC UA, MQTT, CAN bus, Modbus, AGV integration, industrial networking</p>
+      </div>
+      <div class="skill-category">
+        <h3>[LANGUAGES & TOOLS]</h3>
+        <p>Python, C/C++, SQL, Bash, Git</p>
+      </div>
+      <div class="skill-category">
+        <h3>[FAMILIAR_SYSTEMS]</h3>
+        <p>ROS 2, NVIDIA Isaac Sim, synthetic data generation</p>
+      </div>
+    </div>
 
-    <h2>Research & Capstone Projects</h2>
+    <h2>// EXPERIENCE_LOGS</h2>
     <ul>
       <li>
-        <span class="highlight">Automated Reverse Engineering of Automotive CAN Bus Protocols via Machine Learning</span> — <em>Master's Capstone Project (High Distinction)</em>
+        <h3>Senior Control Systems Engineer, IT/OT and Edge Lead // Vinpac International</h3>
+        <span class="role-date">[ Jan 2024 – Present ]</span>
         <ul>
-          <li>Engineered a custom PyTorch pipeline utilising a Transformer architecture for bit-level sequence-to-sequence translation to automatically ingest, parse, and classify proprietary, high-frequency CAN bus physical layer telemetry.</li>
-          <li>Successfully trained models to extract and classify multi-channel physical signal structures across 4 distinct vehicle networks, demonstrating advanced proficiency in handling messy, real-world hardware data with deep learning.</li>
+          <li>Designed a site-wide vehicle tracking system: IFM radars at the entry gate, exit gate and receive bays trigger image capture via Ignition (OPC tag, HTTP) into a SQL queue, where a fine-tuned QwenVL pipeline (deployed on NVIDIA AGX Orin) asynchronously labels and crops each image. Used the vehicle log to automate delivery receipts (delivery bay, product codes, driver time-on-site) for 200+ trucks daily.</li>
+          <li>Developed several containerised Linux services on edge industrial PCs, decoupling data capture from VLM inference so it tolerates compute downtime and allows for hardware scalability (adding cameras without changes to the inference side).</li>
+          <li>Led integration of Dematic AGVs and ERP into plant SCADA over OPC UA for 24/7 warehouse operation.</li>
+          <li>Designed fail-safe networks (VLANs, NATs, fibre) across multiple sites.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Control Systems Engineer // Vinpac International</h3>
+        <span class="role-date">[ Jan 2022 – Dec 2023 ]</span>
+        <ul>
+          <li>Designed and commissioned a pallet tracking and labelling system across 7 production lines handling 10M+ cases a year, linking sensor data to SQL.</li>
+          <li>Wrote standardised, modular control logic deployed on 10 controllers at two sites, reducing commissioning time from several days to a few hours.</li>
+          <li>Primary on-floor and on-call escalation point for network, programming and integration faults on live production lines.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Graduate Control Systems Engineer // Vinpac International</h3>
+        <span class="role-date">[ Feb 2020 – Dec 2021 ]</span>
+        <ul>
+          <li>Commissioned Siemens S7-1200/1500 and Allen-Bradley controllers on live production lines.</li>
+          <li>Completed HMI and control upgrades within 2-hour maintenance windows to avoid production downtime.</li>
         </ul>
       </li>
     </ul>
-    
-    <h2>Work Experience</h2>
+
+    <h2>// EDUCATION_CREDENTIALS</h2>
     <ul>
       <li>
-        <h3>Vinpac International</h3>
-        <span class="role-date">Senior Control Systems Engineer | IT/OT & Edge Infrastructure Lead (Jan 2024 – Present)</span>
+        <h3>Master of Artificial Intelligence and Machine Learning // The University of Adelaide</h3>
+        <span class="role-date">[ Sep 2026 ] | GPA: 6.56/7</span>
         <ul>
-          <li><span class="cyan-highlight">Edge ML & Computer Vision:</span> Architected and deployed containerised Linux environments (Docker) on edge Industrial PCs (IPCs) to run localised computer vision and data processing pipelines, directly integrating real-time inference with physical factory control loops.</li>
-          <li><span class="cyan-highlight">Autonomous Hardware Integration (AGVs):</span> Led the software and network integration of Dematic Automated Guided Vehicles (AGVs) and enterprise ERP platforms into live plant SCADA via OPC-UA, ensuring 24/7 autonomous warehouse reliability and real-time fleet coordination.</li>
-          <li><span class="cyan-highlight">High-Reliability Architecture:</span> Engineered robust control architectures, managed switches (VLANs, NATs, Fibre), and fail-safe communication protocols across multi-site facilities, ensuring deterministic execution and physical machine safety.</li>
-          <li><span class="cyan-highlight">Workflow Optimisation:</span> Leveraged advanced terminal-based AI tools and local LLMs (Ollama) to accelerate script generation, automate network telemetry analysis, and streamline deployment cycles for the engineering team.</li>
-        </ul>
-
-        <span class="role-date" style="margin-top: 15px;">Control Systems Engineer (Jan 2022 – Dec 2023)</span>
-        <ul>
-          <li><span class="cyan-highlight">High-Throughput Automation:</span> Designed and commissioned an automated Pallet Tracking and Labelling System across 7 physical production lines handling 10M+ cases annually, bridging real-time hardware sensor data with SQL database architecture.</li>
-          <li><span class="cyan-highlight">Modular Code Deployment:</span> Engineered standardised, modular control logic deployed across 10 industrial controllers at two separate sites, drastically reducing commissioning latency and downtime.</li>
-          <li><span class="cyan-highlight">Technical Escalation Lead:</span> Acted as the primary on-floor technical escalation point for complex hardware-software debugging, diagnosing network faults, programming issues, and integration failures on active production lines.</li>
-        </ul>
-
-        <span class="role-date" style="margin-top: 15px;">Graduate Control Systems Engineer (Feb 2020 – Dec 2021)</span>
-        <ul>
-          <li><span class="cyan-highlight">Rapid Hardware Commissioning:</span> Commissioned and optimised real-time control hardware (Siemens S7-1200/1500, Allen-Bradley) across live industrial processing lines.</li>
-          <li><span class="cyan-highlight">Time-Critical Deployments:</span> Successfully executed mission-critical HMI and control architecture upgrades within strict 2-hour maintenance windows to eliminate production downtime.</li>
+          <li><strong>Coursework:</strong> Deep Learning Models in PyTorch, Transformer Model Applications, Vision-Language Models.</li>
+          <li><strong>Capstone:</strong> Trained a custom Transformer-based classification framework in PyTorch for reverse engineering of automotive CAN bus protocols from raw vehicle logs, with bit-level signal classification (Supervisor: Dr. Marian Mihailescu).</li>
         </ul>
       </li>
-    </ul>
-    
-    <h2>Core Interests & Specialties</h2>
-    <ul>
-      <li><span class="highlight">Sim-to-Real Robotics</span> — Bridging simulation environments with messy physical hardware constraints.</li>
-      <li><span class="highlight">Imitation Learning & Trajectory Modelling</span> — Action Chunking with Transformers (ACT) and sequence prediction.</li>
-      <li><span class="highlight">Edge Compute Optimization</span> — Running low-latency PyTorch/CUDA inference on containerised edge hardware.</li>
+      <li>
+        <h3>Bachelor of Engineering (Mechanical) (Honours) // The University of Adelaide</h3>
+        <span class="role-date">[ Feb 2019 ]</span>
+        <ul>
+          <li><strong>Coursework:</strong> kinematics, dynamics, mechatronics, control systems.</li>
+          <li><strong>Honours project:</strong> Developed a solar tracking power plant prototype with a real-time controller written in C.</li>
+        </ul>
+      </li>
     </ul>
   </div>
 </body>
