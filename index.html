@@ -11,13 +11,12 @@ Updated: 2026
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --neon-cyan: #00f3ff;
-      --neon-pink: #ff00ff;
-      --neon-yellow: #fff01f;
-      --dark-bg: #0a0a0f;
-      --panel-bg: #111118;
-      --text-main: #e0e0e0;
-      --text-dim: #888899;
+      --neon-accent: #00d4ff;
+      --dark-blue: #0a192f;
+      --dark-bg: #050a14;
+      --panel-bg: #0a192f;
+      --text-main: #e0e8f0;
+      --text-dim: #8899aa;
     }
 
     body {
@@ -27,8 +26,8 @@ Updated: 2026
       color: var(--text-main);
       background-color: var(--dark-bg);
       background-image: 
-        linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
       background-size: 20px 20px;
       margin: 0;
       padding: 0;
@@ -41,7 +40,7 @@ Updated: 2026
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(0, 50, 150, 0.03), rgba(0, 150, 255, 0.01), rgba(0, 0, 255, 0.03));
       background-size: 100% 2px, 3px 100%;
       pointer-events: none;
       z-index: 1000;
@@ -56,8 +55,8 @@ Updated: 2026
     h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 32px;
-      color: var(--neon-cyan);
-      text-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan);
+      color: var(--neon-accent);
+      text-shadow: 0 0 5px var(--neon-accent), 0 0 10px var(--neon-accent);
       margin-bottom: 5px;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -66,22 +65,22 @@ Updated: 2026
     h2 {
       font-family: 'Orbitron', sans-serif;
       font-size: 20px;
-      color: var(--neon-pink);
-      text-shadow: 0 0 5px var(--neon-pink);
+      color: var(--neon-accent);
+      text-shadow: 0 0 5px var(--neon-accent);
       position: relative;
       margin-top: 40px;
       padding-bottom: 8px;
-      border-bottom: 1px solid var(--neon-pink);
+      border-bottom: 1px solid var(--neon-accent);
       letter-spacing: 1px;
     }
 
     h3 {
       font-family: 'Orbitron', sans-serif;
       font-size: 16px;
-      color: var(--neon-yellow);
+      color: var(--neon-accent);
       margin-bottom: 4px;
       margin-top: 15px;
-      text-shadow: 0 0 3px var(--neon-yellow);
+      text-shadow: 0 0 3px var(--neon-accent);
     }
 
     .role-date {
@@ -94,16 +93,16 @@ Updated: 2026
     }
 
     a {
-      color: var(--neon-cyan);
+      color: var(--neon-accent);
       text-decoration: none;
-      border-bottom: 1px dotted var(--neon-cyan);
+      border-bottom: 1px dotted var(--neon-accent);
       transition: all 0.3s;
     }
 
     a:hover {
-      color: var(--neon-pink);
-      border-bottom: 1px solid var(--neon-pink);
-      text-shadow: 0 0 5px var(--neon-pink);
+      color: #fff;
+      border-bottom: 1px solid #fff;
+      text-shadow: 0 0 5px var(--neon-accent);
     }
 
     ul {
@@ -118,7 +117,7 @@ Updated: 2026
 
     li::before {
       content: '>>';
-      color: var(--neon-cyan);
+      color: var(--neon-accent);
       position: absolute;
       left: -20px;
       font-weight: bold;
@@ -127,9 +126,9 @@ Updated: 2026
     .header {
       margin-bottom: 40px;
       padding: 20px;
-      border: 1px solid var(--neon-cyan);
-      background: rgba(0, 243, 255, 0.02);
-      box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+      border: 1px solid var(--neon-accent);
+      background: rgba(0, 212, 255, 0.02);
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.1);
     }
 
     .tagline {
@@ -139,15 +138,24 @@ Updated: 2026
       font-family: 'Fira Code', monospace;
     }
 
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-top: 10px;
+    }
+
     .objective {
-      border-left: 2px solid var(--neon-pink);
+      border-left: 2px solid var(--neon-accent);
       padding-left: 16px;
       margin: 25px 0;
       font-style: normal;
       color: var(--text-main);
-      background: rgba(255, 0, 255, 0.03);
+      background: rgba(0, 212, 255, 0.03);
       padding: 15px;
-      border: 1px solid rgba(255, 0, 255, 0.2);
+      border: 1px solid rgba(0, 212, 255, 0.2);
     }
 
     .skills-grid {
@@ -159,15 +167,16 @@ Updated: 2026
 
     .skill-category {
       background: var(--panel-bg);
-      border: 1px solid var(--neon-cyan);
+      border: 1px solid var(--neon-accent);
       padding: 12px;
-      box-shadow: 0 0 5px rgba(0, 243, 255, 0.1);
+      box-shadow: 0 0 5px rgba(0, 212, 255, 0.1);
     }
 
     .skill-category h3 {
       margin-top: 0;
       font-size: 14px;
-      border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+      color: var(--neon-accent);
+      border-bottom: 1px solid rgba(0, 212, 255, 0.3);
       padding-bottom: 5px;
     }
 
@@ -182,8 +191,12 @@ Updated: 2026
   <div class="container">
     <div class="header">
       <h1>Craig Alexander Atkinson</h1>
-      <p class="tagline">[ ROBOTS & CONTROL SYSTEMS ENGINEER ] | MASTER OF AI & ML (GPA 6.56/7) | 6+ YEARS INDUSTRIAL AUTOMATION & EDGE AI</p>
-      <p>LOCATION: Adelaide, South Australia | GITHUB: <a href="https://github.com/CraigAA" target="_blank">github.com/CraigAA</a> | LINKEDIN: <a href="https://linkedin.com/in/craig-alexander-atkinson" target="_blank">linkedin.com/in/craig-alexander-atkinson</a></p>
+      <p class="tagline">ROBOTS & CONTROL SYSTEMS ENGINEER | MASTER OF AI & ML (GPA 6.56/7) | 6+ YEARS INDUSTRIAL AUTOMATION & EDGE AI</p>
+      <div class="contact-links">
+        <span>Adelaide, South Australia</span>
+        <span>GITHUB: <a href="https://github.com/CraigAA" target="_blank">github.com/CraigAA</a></span>
+        <span>LINKEDIN: <a href="https://linkedin.com/in/craig-alexander-atkinson" target="_blank">linkedin.com/in/craig-alexander-atkinson</a></span>
+      </div>
     </div>
     
     <div class="objective">
@@ -194,23 +207,23 @@ Updated: 2026
     <h2>// TECHNICAL_MODULES</h2>
     <div class="skills-grid">
       <div class="skill-category">
-        <h3>[ROBOTICS & EDGE COMPUTE]</h3>
+        <h3>ROBOTICS & EDGE COMPUTE</h3>
         <p>NVIDIA Jetson AGX Orin, CUDA, sensor and actuator integration, Docker</p>
       </div>
       <div class="skill-category">
-        <h3>[MACHINE LEARNING]</h3>
+        <h3>MACHINE LEARNING</h3>
         <p>PyTorch, computer vision (YOLO), Transformers, vision-language models</p>
       </div>
       <div class="skill-category">
-        <h3>[INDUSTRIAL SYSTEMS]</h3>
+        <h3>INDUSTRIAL SYSTEMS</h3>
         <p>PLCs (Siemens, Allen-Bradley), Ignition SCADA, OPC UA, MQTT, CAN bus, Modbus, AGV integration, industrial networking</p>
       </div>
       <div class="skill-category">
-        <h3>[LANGUAGES & TOOLS]</h3>
+        <h3>LANGUAGES & TOOLS</h3>
         <p>Python, C/C++, SQL, Bash, Git</p>
       </div>
       <div class="skill-category">
-        <h3>[FAMILIAR_SYSTEMS]</h3>
+        <h3>FAMILIAR_SYSTEMS</h3>
         <p>ROS 2, NVIDIA Isaac Sim, synthetic data generation</p>
       </div>
     </div>
@@ -219,7 +232,7 @@ Updated: 2026
     <ul>
       <li>
         <h3>Senior Control Systems Engineer, IT/OT and Edge Lead // Vinpac International</h3>
-        <span class="role-date">[ Jan 2024 – Present ]</span>
+        <span class="role-date">Jan 2024 – Present</span>
         <ul>
           <li>Designed a site-wide vehicle tracking system: IFM radars at the entry gate, exit gate and receive bays trigger image capture via Ignition (OPC tag, HTTP) into a SQL queue, where a fine-tuned QwenVL pipeline (deployed on NVIDIA AGX Orin) asynchronously labels and crops each image. Used the vehicle log to automate delivery receipts (delivery bay, product codes, driver time-on-site) for 200+ trucks daily.</li>
           <li>Developed several containerised Linux services on edge industrial PCs, decoupling data capture from VLM inference so it tolerates compute downtime and allows for hardware scalability (adding cameras without changes to the inference side).</li>
@@ -229,7 +242,7 @@ Updated: 2026
       </li>
       <li>
         <h3>Control Systems Engineer // Vinpac International</h3>
-        <span class="role-date">[ Jan 2022 – Dec 2023 ]</span>
+        <span class="role-date">Jan 2022 – Dec 2023</span>
         <ul>
           <li>Designed and commissioned a pallet tracking and labelling system across 7 production lines handling 10M+ cases a year, linking sensor data to SQL.</li>
           <li>Wrote standardised, modular control logic deployed on 10 controllers at two sites, reducing commissioning time from several days to a few hours.</li>
@@ -238,7 +251,7 @@ Updated: 2026
       </li>
       <li>
         <h3>Graduate Control Systems Engineer // Vinpac International</h3>
-        <span class="role-date">[ Feb 2020 – Dec 2021 ]</span>
+        <span class="role-date">Feb 2020 – Dec 2021</span>
         <ul>
           <li>Commissioned Siemens S7-1200/1500 and Allen-Bradley controllers on live production lines.</li>
           <li>Completed HMI and control upgrades within 2-hour maintenance windows to avoid production downtime.</li>
@@ -250,7 +263,7 @@ Updated: 2026
     <ul>
       <li>
         <h3>Master of Artificial Intelligence and Machine Learning // The University of Adelaide</h3>
-        <span class="role-date">[ Sep 2026 ] | GPA: 6.56/7</span>
+        <span class="role-date">Sep 2026 | GPA: 6.56/7</span>
         <ul>
           <li><strong>Coursework:</strong> Deep Learning Models in PyTorch, Transformer Model Applications, Vision-Language Models.</li>
           <li><strong>Capstone:</strong> Trained a custom Transformer-based classification framework in PyTorch for reverse engineering of automotive CAN bus protocols from raw vehicle logs, with bit-level signal classification (Supervisor: Dr. Marian Mihailescu).</li>
@@ -258,7 +271,7 @@ Updated: 2026
       </li>
       <li>
         <h3>Bachelor of Engineering (Mechanical) (Honours) // The University of Adelaide</h3>
-        <span class="role-date">[ Feb 2019 ]</span>
+        <span class="role-date">Feb 2019</span>
         <ul>
           <li><strong>Coursework:</strong> kinematics, dynamics, mechatronics, control systems.</li>
           <li><strong>Honours project:</strong> Developed a solar tracking power plant prototype with a real-time controller written in C.</li>
